@@ -1,12 +1,18 @@
-import React from "react";
 import CategoriesItem from "./CategoriesItem";
+import "./category.sass";
 
-type Props = {};
+type Props = {
+  categories: [];
+};
 
-const CategoriesList = (props: Props) => {
+const CategoriesList = ({ categories }: Props) => {
   return (
     <div className="categoriesList_wrapper">
-      <ul>{<CategoriesItem></CategoriesItem>}</ul>
+      <ul>
+        {categories.map((item, index) => (
+          <CategoriesItem key={index} categoryName={item} />
+        ))}
+      </ul>
     </div>
   );
 };

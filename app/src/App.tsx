@@ -6,7 +6,9 @@ import GetJoke from "./components/getJoke";
 function App() {
   return (
     <div className="container">
-      <GetJoke />
+      <div className="left-side">
+        <GetJoke />
+      </div>
     </div>
   );
 }

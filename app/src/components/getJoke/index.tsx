@@ -5,10 +5,10 @@ type Props = {};
 
 const GetJoke = ({}: Props) => {
   return (
-    <div>
+    <>
       <Articles />
       <GetJokeBlock />
-    </div>
+    </>
   );
 };
 

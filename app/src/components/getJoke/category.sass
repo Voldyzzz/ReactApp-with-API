@@ -1,0 +1,33 @@
+@import "../../styles/mixins"
+
+.categoriesList_wrapper
+    max-width: 680px
+
+    ul
+        display: flex
+        flex-wrap: wrap
+
+        .categoryItem
+            @include font-roboto(500)
+            font-size: 12px 
+            line-height: 16px
+            letter-spacing: 2px
+            color: #ABABAB
+            padding: 6px 15px
+            margin-right: 10px
+
+            &:last-child
+                margin-right: 0
+            
+            input[type="checkbox"]
+                display: none
+            
+        & .selected
+            color: #333333
+            
+            
+            
+                
+
+       
+                
