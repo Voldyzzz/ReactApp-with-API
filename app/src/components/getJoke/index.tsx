@@ -1,13 +1,17 @@
 import Articles from "./Articles";
-import GetJokeBlock from "./getJokeBlock";
+import GetJokeBlock from "./GetJokeBlock";
 
 type Props = {};
 
 const GetJoke = ({}: Props) => {
   return (
     <>
-      <Articles />
-      <GetJokeBlock />
+      <div className="main_container">
+        <div>
+          <Articles />
+          <GetJokeBlock />
+        </div>
+      </div>
     </>
   );
 };

@@ -1,0 +1,72 @@
+@import "../../styles/mixins"
+
+.listOf_jokes_container
+    width: 680px
+
+    ul
+        list-style-type: none
+
+        .list-item_wrapper
+            padding: 67px 40px 45px
+            display: flex
+            flex-direction: column
+            border-radius: 20px
+            border: 1px solid #ababab
+            margin-bottom: 40px
+
+            .favourite-btn
+                width: 18px
+                height: 17px
+                color: white
+                cursor: pointer
+                margin-left: auto
+                background-color: white
+                border: none
+                
+
+        .list_item_block
+            display: flex
+            width: 600px
+
+            img
+                width: 20px
+                height: 18px
+                padding: 10px
+                margin-right: 20px
+
+        .list_item_block_wrapper
+            
+            .icon-id
+                margin: 0 0 5px
+                a
+                text-decoration: underline;
+                text-decoration-skip-ink: none;
+                color: #8ea7ff;
+            
+            .text-joke
+                width: 500px
+                font-size: 18px
+                line-height: 26px
+                margin: 0 0 22px
+            
+            .info-wrapper
+                display: flex
+                justify-content: space-between
+
+                .date-joke
+                    font-size: 10px
+                    line-height: 14px
+                    color: #ababab
+                
+                .category
+                    width: 106px
+                    height: 24px
+                    font-size: 10px
+                    line-height: 14px
+                    letter-spacing: 2px
+                    text-transform: uppercase
+                    @include font-roboto(500)
+                    
+            
+            
+            

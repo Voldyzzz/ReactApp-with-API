@@ -1,23 +1,25 @@
-import { useState } from "react";
-
 type Props = {
   categoryName: string;
+  selectedCategory: string;
+  handleOnChangeCategory: (e: any) => void;
 };
 
-const CategoriesItem = ({ categoryName }: Props) => {
-  const [isSelected, setSelected] = useState<boolean>(false);
-
-  const handleOnChange = () => {
-    setSelected(!isSelected);
-  };
-
+const CategoriesItem = ({
+  categoryName,
+  selectedCategory,
+  handleOnChangeCategory,
+}: Props) => {
   return (
-    <label className={`categoryItem ${isSelected && "selected"}`}>
+    <label
+      className={`categoryItem ${
+        categoryName === selectedCategory ? "selected" : ""
+      }`}
+    >
       <input
-        type="checkbox"
+        type="radio"
         value={categoryName}
         name="selectCategory"
-        onChange={handleOnChange}
+        onChange={() => handleOnChangeCategory(event)}
       />
       {categoryName.toUpperCase()}
     </label>

@@ -1,0 +1,79 @@
+@import "../../styles/mixins"
+
+.listOfFavouriteJokes 
+    h3
+        font-size: 20px
+        line-height: 28px
+        color: #ababab
+        @include font-roboto(500)
+        
+    ul
+        width: 400px
+        list-style-type: none
+        
+        
+        .list-item_wrapper
+            display: flex
+            flex-direction: column
+            width: 360px
+            border: 1px solid #f8f8f8;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.1);
+            background: #fff;
+            padding: 20px
+            margin-bottom: 20px    
+
+            .unfavourite-btn
+                width: 18px
+                height: 17px
+                color: white
+                cursor: pointer
+                margin-left: auto
+                background-color: white
+                border: none
+
+            .list_item_block
+                display: flex
+
+                img
+                    width: 20px
+                    height: 18px
+                    padding: 10px
+                    margin-right: 20px
+            
+            .list_item_block_wrapper
+            
+                .icon-id
+                    line-height: 14px
+                    font-size: 10px
+                    @include font-roboto(500)
+                    margin: 0 0 5px
+                    
+                    a
+                        text-decoration: underline;
+                        text-decoration-skip-ink: none;
+                        color: #8ea7ff;
+            
+                .text-joke
+                    width: 300px
+                    font-size: 14px
+                    line-height: 20px
+                    margin: 0 0 20px
+            
+                .info-wrapper
+                    display: flex
+                    justify-content: space-between
+
+                .date-joke
+                    font-size: 10px
+                    line-height: 14px
+                    color: #ababab
+
+                
+
+           
+                
+            
+            
+
+    
