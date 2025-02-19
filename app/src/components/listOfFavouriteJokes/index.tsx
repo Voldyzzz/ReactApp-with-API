@@ -9,6 +9,7 @@ const ListOfFavouriteJokes = () => {
   );
   return (
     <div className="listOfFavouriteJokes">
+      <div className="mobile__burger"></div>
       <h3>Favourite</h3>
       <ul>
         {listOfJokes.map((item) => (
