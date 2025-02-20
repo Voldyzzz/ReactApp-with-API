@@ -1,17 +1,45 @@
 import "./listOfFavouriteJokes.sass";
+import "./ham-menu.sass";
 import ListItem from "./ListItem";
 import { useSelector } from "react-redux";
 import { RootState } from "../../store/state";
+import { useEffect } from "react";
 
-const ListOfFavouriteJokes = () => {
+type Props = {
+  toggleLeftSideBg: () => void;
+};
+
+const ListOfFavouriteJokes = ({ toggleLeftSideBg }: Props) => {
   const listOfJokes = useSelector(
     (state: RootState) => state.ListOfJokesSlice.favouriteJokes
   );
+
+  useEffect(() => {
+    const hamMenu = document.querySelector(".ham_menu");
+    const listOffScreen = document.querySelector(".list-off-screen");
+
+    const handleOnClickHamMenu = () => {
+      hamMenu?.classList.toggle("active");
+      listOffScreen?.classList.toggle("active");
+      toggleLeftSideBg();
+    };
+
+    hamMenu?.addEventListener("click", handleOnClickHamMenu);
+
+    return () => {
+      hamMenu?.removeEventListener("click", handleOnClickHamMenu);
+    };
+  }, []);
   return (
     <div className="listOfFavouriteJokes">
-      <div className="mobile__burger"></div>
-      <h3>Favourite</h3>
-      <ul>
+      <div className="ham_menu_wrapper">
+        <div className="ham_menu">
+          <span></span>
+          <span></span>
+        </div>
+        <h3>Favourite</h3>
+      </div>
+      <ul className="list-off-screen">
         {listOfJokes.map((item) => (
           <ListItem
             key={item.id}

@@ -1,6 +1,9 @@
 @import "../../styles/mixins"
 
 .listOf_jokes_container
+    position: relative
+    z-index: 1
+
     ul
         list-style-type: none
 
@@ -10,7 +13,10 @@
             flex-direction: column
             border-radius: 20px
             border: 1px solid #ababab
+            background-color: #f8f8f8
             margin-bottom: 40px
+            position: relative
+            z-index: 3
 
             .favourite-btn
                 width: 18px
@@ -18,7 +24,7 @@
                 color: white
                 cursor: pointer
                 margin-left: auto
-                background-color: white
+                background-color: #f8f8f8
                 border: none
                 
 
@@ -37,9 +43,9 @@
             .icon-id
                 margin: 0 0 5px
                 a
-                text-decoration: underline;
-                text-decoration-skip-ink: none;
-                color: #8ea7ff;
+                    text-decoration: underline;
+                    text-decoration-skip-ink: none;
+                    color: #8ea7ff;
             
             .text-joke
                 width: 500px

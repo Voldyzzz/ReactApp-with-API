@@ -1,0 +1,44 @@
+.ham_menu_wrapper
+    display: flex
+    width: 122px
+    height: 28px
+
+    @media screen and (max-width: 1370px)
+        margin-left: auto
+
+        .ham_menu
+            width: 28px
+            height: 28px
+            margin-right: 10px 
+            position: relative
+            border-radius: 100%
+            background-color: #000
+
+        .ham_menu span
+            width: 14px
+            height: 2px
+            background-color: #fff
+            border-radius: 2px
+            position: absolute
+            left: 50%
+            transform: translateX(-50%)
+            transition: 0.3s ease
+
+        & span:nth-child(1)
+            top: 35%
+        
+        & span:nth-child(2)
+            top: 55%
+        
+        .ham_menu.active span:nth-child(1)
+            top: 50%
+            transform: translate(-50%,-50%) rotate(45deg)
+        
+        .ham_menu.active span:nth-child(2)
+            top: 50%
+            transform: translate(-50%, -50%) rotate(-45deg)
+
+
+
+            
+

@@ -1,5 +1,5 @@
 import "./listOfJokes.sass";
-import ListItem from "./listItem";
+import ListItem from "./ListItem";
 import { useSelector } from "react-redux";
 import { RootState } from "../../store/state";
 
