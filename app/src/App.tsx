@@ -6,20 +6,20 @@ import ListOfFavouriteJokes from "./components/listOfFavouriteJokes";
 import { useState } from "react";
 
 function App() {
-  const [isDark, setIsDark] = useState<boolean>(false);
+  const [isBgBlack, setBgBlack] = useState<boolean>(false);
 
-  const toggleLeftSideBg = () => {
-    setIsDark((prev) => !prev);
+  const changeContainerBg = () => {
+    setBgBlack((prev) => !prev);
   };
 
   return (
-    <div className="container">
-      <div className={`left-side ${isDark ? "bg-black" : ""}`}>
+    <div className={`container ${isBgBlack ? "bg-black" : ""}`}>
+      <div className="left-side">
         <GetJoke />
         <ListOfJokes />
       </div>
-      <div className={`right-side ${isDark ? "bg-white" : ""}`}>
-        <ListOfFavouriteJokes toggleLeftSideBg={toggleLeftSideBg} />
+      <div className="right-side">
+        <ListOfFavouriteJokes changeContainerBg={changeContainerBg} />
       </div>
     </div>
   );

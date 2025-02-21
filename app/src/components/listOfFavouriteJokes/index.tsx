@@ -6,10 +6,10 @@ import { RootState } from "../../store/state";
 import { useEffect } from "react";
 
 type Props = {
-  toggleLeftSideBg: () => void;
+  changeContainerBg: () => void;
 };
 
-const ListOfFavouriteJokes = ({ toggleLeftSideBg }: Props) => {
+const ListOfFavouriteJokes = ({ changeContainerBg }: Props) => {
   const listOfJokes = useSelector(
     (state: RootState) => state.ListOfJokesSlice.favouriteJokes
   );
@@ -21,7 +21,7 @@ const ListOfFavouriteJokes = ({ toggleLeftSideBg }: Props) => {
     const handleOnClickHamMenu = () => {
       hamMenu?.classList.toggle("active");
       listOffScreen?.classList.toggle("active");
-      toggleLeftSideBg();
+      changeContainerBg();
     };
 
     hamMenu?.addEventListener("click", handleOnClickHamMenu);

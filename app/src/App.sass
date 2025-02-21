@@ -3,10 +3,19 @@
 .container 
   display: flex
   font-size: 16px
-  max-width: 100vw
   width: 100%
   @include font-roboto(400)
 
+.bg-black::before
+  content: ''
+  position: absolute
+  top: 0
+  left: 0
+  width: 100vw  // Растягиваем на всю ширину экрана
+  height: 100vh  // Растягиваем на всю высоту экрана
+  background: rgba(0, 0, 0, 0.3)  // Ваш фон
+  z-index: 0  // Помещаем фон на задний план
+  
   .left-side
     max-width: 680px
     padding: 40px 0 40px 134px
@@ -18,23 +27,23 @@
   
   @media screen and (max-width: 1370px)
     .left-side
+      padding: 20px 0 20px 100px
       max-width: 754px
-    
-    .left-side.bg-black
-      position: fixed
-      top: 0
-      left: 0
-      width: 100vw
-      height: 100vh
-      z-index: 10
-      background: rgba(0, 0, 0, 0.3);
-      transition: all 0.3s ease
-      
+      width: 100%
 
     .right-side
-      width: 122px
-      height: 28px
+      width: 100%
+      height: 100%
+      background: #fff 
+    
+    .right-side.bg-black
+      position: relative
+      height: 100vh
+      z-index: 0
       background: #fff
+
+
+
 
     
      

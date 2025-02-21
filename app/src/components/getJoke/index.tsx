@@ -6,11 +6,9 @@ type Props = {};
 const GetJoke = ({}: Props) => {
   return (
     <>
-      <div className="main_container">
-        <div>
-          <Articles />
-          <GetJokeBlock />
-        </div>
+      <div>
+        <Articles />
+        <GetJokeBlock />
       </div>
     </>
   );
