@@ -5,11 +5,7 @@ import { useSelector } from "react-redux";
 import { RootState } from "../../store/state";
 import { useEffect } from "react";
 
-type Props = {
-  changeContainerBg: () => void;
-};
-
-const ListOfFavouriteJokes = ({ changeContainerBg }: Props) => {
+const ListOfFavouriteJokes = () => {
   const listOfJokes = useSelector(
     (state: RootState) => state.ListOfJokesSlice.favouriteJokes
   );
@@ -21,7 +17,6 @@ const ListOfFavouriteJokes = ({ changeContainerBg }: Props) => {
     const handleOnClickHamMenu = () => {
       hamMenu?.classList.toggle("active");
       listOffScreen?.classList.toggle("active");
-      changeContainerBg();
     };
 
     hamMenu?.addEventListener("click", handleOnClickHamMenu);
